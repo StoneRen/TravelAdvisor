@@ -9,6 +9,7 @@ export default makeStyles(() => ({
     width: '100px',
   },
   mapContainer: {
+    marginTop: '20px',
     height: '85vh',
     width: '100%',
   },

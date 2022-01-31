@@ -13,19 +13,10 @@ import PlaceDetails from '../PlaceDetails/PlaceDetails'
 
 import userStyle from './style'
 
-const List = () => {
+const List = ({ places }) => {
   const classes = userStyle()
   const [type, setType] = useState('restaurants')
   const [rating, setRating] = useState(0)
-
-  const places = [
-    {
-      name: 'Cool Place',
-    },
-    {
-      name: 'Best Beer',
-    },
-  ]
 
   return (
     <div className={classes.container}>
@@ -51,11 +42,14 @@ const List = () => {
         </Select>
       </FormControl>
       <Grid container spacing={3} className={classes.list}>
-        {places?.map((place, index) => (
-          <Grid item key={index} xs={12}>
-            <PlaceDetails place={place} />
-          </Grid>
-        ))}
+        {places?.map(
+          (place, index) =>
+            place.name && (
+              <Grid item key={index} xs={12}>
+                <PlaceDetails place={place} />
+              </Grid>
+            )
+        )}
       </Grid>
     </div>
   )
