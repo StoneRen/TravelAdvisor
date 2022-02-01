@@ -5,7 +5,6 @@ import {
   Typography,
   Box,
   Chip,
-  CardActions,
   Button,
   CardMedia,
 } from '@material-ui/core'

@@ -15,7 +15,7 @@ import userStyle from './style'
 
 const List = ({ places }) => {
   const classes = userStyle()
-  const [type, setType] = useState('restaurants')
+  const [type] = useState('restaurants')
   const [rating, setRating] = useState(0)
 
   return (
